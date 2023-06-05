@@ -1,6 +1,6 @@
 # Techtonica Final Project Template - Rahma was here
 
-For anyone struggling to integrate Auth0 and  react-router, here's a template you can use to get started. I'll try to write this README as a step-by-step guide with the assumption you know very little about Auth0 and react-router.
+Hello y'all! For anyone struggling to integrate Auth0 and  react-router, here's a template you can use to get started. I'll try to write this README as a step-by-step guide with the assumption you know very little about Auth0 and react-router.
 
 ## Install Dependencies
 
