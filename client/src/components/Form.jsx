@@ -54,11 +54,6 @@ function QuestionForm() {
             .then((response) => response.json())
             .then((trips) => {
               // console.log('trips fetched when new trips is added', trips);
-              trips.sort(function (a, b) {
-                let tripA = a.trip_start_date;
-                let tripB = b.trip_start_date;
-                return tripA < tripB ? -1 : tripA > tripB ? 1 : 0;
-              });
               setTrips(trips);
               handleClose();
             });
