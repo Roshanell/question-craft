@@ -16,9 +16,19 @@
     color: white;
 }
 
-.large-white-text {
+.h1-white-text {
     color: white;
-    font-size: 2em;
+    text-shadow: 2px 2px 5px #666;
+    margin: 2.5rem 0;
+    font-size: 4em;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.h3-white-text {
+    color: white;
+    margin: .5rem 0;
+    font-size: 1.35em;
     letter-spacing: 2px;
     text-align: center;
 }
