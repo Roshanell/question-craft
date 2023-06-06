@@ -38,7 +38,7 @@ function QuestionForm() {
 						aria-describedby="inputGroup-sizing-sm"
 					/>
 				</InputGroup>
-				<button type='submit' className="orange-button">Submit</button>
+				<button type='submit' className="orange-button" style={{ padding: '5px', margin: '3px'}}>Submit</button>
 			</div>
 		</div>
 	);
