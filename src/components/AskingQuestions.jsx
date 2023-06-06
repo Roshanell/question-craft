@@ -10,8 +10,8 @@ function AskingQuestions() {
             solutions more quickly and make faster progress.</p>
             </div>
             <div class="column">
-            <Button href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md" 
-            class="orange-button">Learn more about questions from our curriculum </Button>
+            <a href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md" 
+            class="orange-button" target="_blank" rel="noopener no referrer">Learn more about questions from our curriculum </a>
             </div>
 		</div>
 	);
