@@ -1,0 +1,8 @@
+.row {
+    -webkit-display: flex;
+    -moz-display: flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 3rem 5rem;
+  }
