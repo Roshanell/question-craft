@@ -1,6 +1,13 @@
+import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import Response from "./Response";
+
+
 function QuestionForm() {
+
+	const [response, setResponse] = useState(null)
+
 	return (
 		<div>
 			<p>
@@ -10,7 +17,7 @@ function QuestionForm() {
 				In the provided input field, enter your technical question. Be as clear
 				and concise as possible while including all necessary details
 			</p>
-			<div className="form-inputs">
+			<Form className="form-inputs">
 				<InputGroup size="lg">
 					<InputGroup.Text id="inputGroup-sizing-lg">
 						I want to accomplish
@@ -39,7 +46,8 @@ function QuestionForm() {
 					/>
 				</InputGroup>
 				<button type='submit' className="orange-button" style={{ padding: '5px', margin: '3px'}}>Submit</button>
-			</div>
+			</Form>
+			{response ? <Response response={response} /> : null}
 		</div>
 	);
 }
