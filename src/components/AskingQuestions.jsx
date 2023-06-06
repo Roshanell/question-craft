@@ -1,4 +1,5 @@
 import '/src/components/AskingQuestions.css'
+import { Button } from 'react-bootstrap';
 
 function AskingQuestions() {
 	return (
@@ -7,6 +8,10 @@ function AskingQuestions() {
             <p class="justify">Why ask questions? The ability to ask questions that lead to useful answers is a must-have skill for 
             software engineers because they are constantly solving problems. Asking the right questions helps engineers arrive at 
             solutions more quickly and make faster progress.</p>
+            </div>
+            <div class="column">
+            <Button href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md" 
+            class="orange-button">Learn more about questions from our curriculum </Button>
             </div>
 		</div>
 	);

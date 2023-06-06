@@ -21,3 +21,18 @@
     flex: 1;
     padding: 0 1rem;
 }
+
+.orange-button {
+    line-height: 36px;
+    padding: 25px;
+    margin: 0;
+    /* -webkit-border-radius: 8px; */
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    background-color: #fc7625;
+    text-align: center;
+    text-decoration: none;
+}
