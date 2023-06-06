@@ -1,10 +1,10 @@
 
-import Card from "../components/bioCards";
+import Bio from "../components/bioCards";
 
 const About = () => {
     return (
         <div>
-            <Card />
+            <Bio />
         </div>
     );
 };
