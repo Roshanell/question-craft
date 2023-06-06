@@ -34,7 +34,7 @@ function QuestionForm() {
 			type: "add",
 			payload: { key: event.target.name, value: event.target.value },
 		});
-		console.log(state)
+		// console.log(state)
       };
 
       // console.log(user)
@@ -43,18 +43,15 @@ function QuestionForm() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log(activities)
-		const userPrompt = 'testing'
-        // const userPrompt = `I want to accomplish ${accomplish}. I searched for ${searched}. I ran into this error ${error}. Please help me craft a question and send  What should I pack for this trip? Write your response in the form of an array that looks like {'list': ['sandals', 'beach towel', 'sunglasses']}`;
-        // let mockDataArray = "? -Swimsuits -Beach towels -Kayaking gear -Sunscreen -Sunglasses -Hat -Sarong -Flip Flops -Snorkeling gear -Beach toys -Karaoke machine -Beach chairs -Cooler -Picnic blanket -Snacks -Drinks -Binoculars -Camera -Bug spray -First aid kit".split(/[-?]/)
-        // let noEmptiesArray = mockDataArray.filter((item) => item.trim() != '');
-        // setSuggestions(noEmptiesArray);
+		// const userPrompt = 'testing'
+        const userPrompt = `I want to accomplish ${state.accomplish}. I searched for ${state.searched}. I ran into this error ${state.error}. Please help me craft a question that I can send to my peers to ask for help`;
         // console.log(userPrompt)
             try {
               fetch(`http://localhost:8080/api/openai/${userPrompt}`)
                 .then((response) => response.json())
                 .then((data) => {
                   console.log("line 38 in suggestion box frontend - response", data);
-                  setResponse(data[0].question);
+                  setResponse(data);
                 });
           dispatch({ type: "reset", initialValue });
           // console.log(state)
@@ -65,56 +62,62 @@ function QuestionForm() {
       };
 
 	return (
-		<div>
-			<p>
-				Formulating Your Question: Think about the technical problem or
-				challenge you are facing. Take some time to clearly understand the issue
-				and gather relevant information before proceeding. Enter Your Question:
-				In the provided input field, enter your technical question. Be as clear
-				and concise as possible while including all necessary details
-			</p>
-			<Form className="form-inputs" onSubmit={handleSubmit}>
-				<InputGroup size="lg">
-					<InputGroup.Text id="inputGroup-sizing-lg">
-						I want to accomplish
-					</InputGroup.Text>
-					<Form.Control
-						onChange={inputAction}
-						name="accomplish"
-                        value={state.accomplish}
-						aria-label="Large"
-						aria-describedby="inputGroup-sizing-sm"
-					/>
-				</InputGroup>
-				<InputGroup size="lg">
-					<InputGroup.Text id="inputGroup-sizing-lg">
-						I searched for
-					</InputGroup.Text>
-					<Form.Control
-						onChange={inputAction}
-						name="searched"
-                        value={state.searched}
-						aria-label="Large"
-						aria-describedby="inputGroup-sizing-sm"
-					/>
-				</InputGroup>
-				<InputGroup size="lg">
-					<InputGroup.Text id="inputGroup-sizing-lg">
-						I am getting this error
-					</InputGroup.Text>
-					<Form.Control
-						onChange={inputAction}
-						name="error"
-                        value={state.error}
-						aria-label="Large"
-						aria-describedby="inputGroup-sizing-sm"
-					/>
-				</InputGroup>
-				<button type='submit' className="orange-button" style={{ padding: '5px', margin: '3px'}}>Submit</button>
-			</Form>
-			{response ? <Response response={response} /> : null}
-		</div>
-	);
+    <div>
+      <p>
+        Formulating Your Question: Think about the technical problem or
+        challenge you are facing. Take some time to clearly understand the issue
+        and gather relevant information before proceeding. Enter Your Question:
+        In the provided input field, enter your technical question. Be as clear
+        and concise as possible while including all necessary details
+      </p>
+      <Form className="form-inputs" onSubmit={handleSubmit}>
+        <InputGroup size="lg">
+          <InputGroup.Text id="inputGroup-sizing-lg">
+            I want to accomplish
+          </InputGroup.Text>
+          <Form.Control
+            onChange={inputAction}
+            name="accomplish"
+            value={state.accomplish}
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </InputGroup>
+        <InputGroup size="lg">
+          <InputGroup.Text id="inputGroup-sizing-lg">
+            I searched for
+          </InputGroup.Text>
+          <Form.Control
+            onChange={inputAction}
+            name="searched"
+            value={state.searched}
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </InputGroup>
+        <InputGroup size="lg">
+          <InputGroup.Text id="inputGroup-sizing-lg">
+            I am getting this error
+          </InputGroup.Text>
+          <Form.Control
+            onChange={inputAction}
+            name="error"
+            value={state.error}
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </InputGroup>
+        <button
+          type="submit"
+          className="orange-button"
+          style={{ padding: "5px", margin: "3px" }}
+        >
+          Submit
+        </button>
+      </Form>
+      {response ? <Response response={response} /> : null}
+    </div>
+  );
 }
 
 export default QuestionForm;
