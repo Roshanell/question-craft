@@ -43,13 +43,14 @@ const Cards = () => {
   return (
     <div style={styles.container}>
       <div style={styles.hero}>
-        <h1>This is the Hero section</h1>
+        <h1>Contributors</h1>
+        <h3 class="h3-white-text"> Meet the team behind Techtonica's Question Builder </h3>
       </div>
       <div style={styles.cardContainer}>
         <div style={styles.card}>
           <div style={styles.picture}></div>
           <div>
-            <p style={styles.text}>Line 1</p>
+            <h4 style={styles.text}>Line 1</h4>
             <p style={styles.text}>Line 2</p>
             <p style={styles.text}>Line 3</p>
             <p style={styles.text}>Line 4</p>
@@ -59,7 +60,7 @@ const Cards = () => {
         <div style={styles.card}>
           <div style={styles.picture}></div>
           <div>
-            <p style={styles.text}>Line 1</p>
+          <h4 style={styles.text}>Line 1</h4>
             <p style={styles.text}>Line 2</p>
             <p style={styles.text}>Line 3</p>
             <p style={styles.text}>Line 4</p>
@@ -69,7 +70,7 @@ const Cards = () => {
         <div style={styles.card}>
           <div style={styles.picture}></div>
           <div>
-            <p style={styles.text}>Line 1</p>
+          <h4 style={styles.text}>Line 1</h4>
             <p style={styles.text}>Line 2</p>
             <p style={styles.text}>Line 3</p>
             <p style={styles.text}>Line 4</p>
@@ -79,7 +80,7 @@ const Cards = () => {
         <div style={styles.card}>
           <div style={styles.picture}></div>
           <div>
-            <p style={styles.text}>Line 1</p>
+          <h4 style={styles.text}>Line 1</h4>
             <p style={styles.text}>Line 2</p>
             <p style={styles.text}>Line 3</p>
             <p style={styles.text}>Line 4</p>
