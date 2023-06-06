@@ -42,21 +42,20 @@ function QuestionForm() {
       //A function to handle the post request
       const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-          fetch("/addtrip", {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(state),
-          })
-            .then((response) => response.json())
-            .then((trips) => {
-              // console.log('trips fetched when new trips is added', trips);
-              setTrips(trips);
-              handleClose();
-            });
+        // console.log(activities)
+		const userPrompt = 'testing'
+        // const userPrompt = `I want to accomplish ${accomplish}. I searched for ${searched}. I ran into this error ${error}. Please help me craft a question and send  What should I pack for this trip? Write your response in the form of an array that looks like {'list': ['sandals', 'beach towel', 'sunglasses']}`;
+        // let mockDataArray = "? -Swimsuits -Beach towels -Kayaking gear -Sunscreen -Sunglasses -Hat -Sarong -Flip Flops -Snorkeling gear -Beach toys -Karaoke machine -Beach chairs -Cooler -Picnic blanket -Snacks -Drinks -Binoculars -Camera -Bug spray -First aid kit".split(/[-?]/)
+        // let noEmptiesArray = mockDataArray.filter((item) => item.trim() != '');
+        // setSuggestions(noEmptiesArray);
+        // console.log(userPrompt)
+            try {
+              fetch(`http://localhost:8080/api/openai/${userPrompt}`)
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("line 38 in suggestion box frontend - response", data);
+                  setResponse(data[0].question);
+                });
           dispatch({ type: "reset", initialValue });
           // console.log(state)
           // window.location = "/";
@@ -74,7 +73,7 @@ function QuestionForm() {
 				In the provided input field, enter your technical question. Be as clear
 				and concise as possible while including all necessary details
 			</p>
-			<Form className="form-inputs">
+			<Form className="form-inputs" onSubmit={handleSubmit}>
 				<InputGroup size="lg">
 					<InputGroup.Text id="inputGroup-sizing-lg">
 						I want to accomplish
