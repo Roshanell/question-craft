@@ -5,4 +5,20 @@
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 3rem 5rem;
+}
+
+.row__center {
+    align-items: center;
   }
+
+.blue-background {
+    background-color: #0093b5;
+    color: white;
+}
+
+.large-white-text {
+    color: white;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-align: center;
+}
