@@ -1,7 +1,10 @@
 function Response({ response }) {
 	return (
 		<div>
-			<h1>Response will go here</h1>
+			<h1>
+
+				{response && response}
+			</h1>
 		</div>
 	);
 }
