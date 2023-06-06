@@ -6,9 +6,7 @@ const Bio = () => {
 
   return (
     <div>
-    
-      {/* Card section */}
-      <Container>
+     <Container>
         <Row>
           <Col md={6} className="offset-md-3">
             <Card className="mb-3">
