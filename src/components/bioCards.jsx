@@ -64,7 +64,7 @@ const Bio = () => {
                 <Col md={4}>
                   <Image src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*Oxhs2VdlOI1z1javQI1s4w.jpeg" roundedCircle className="p-3" />
                 </Col>
-                <Col md={8}>
+                <Col md={10}>
                   <Card.Body>
                     <Card.Title>Meet Rahma (she/her) </Card.Title>
                     <Card.Text>

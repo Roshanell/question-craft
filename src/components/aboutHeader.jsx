@@ -1,13 +1,29 @@
-import { Row } from "react-bootstrap"
-import '/src/components/HeaderSection.css'
+import React from 'react';
+const styles = {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    hero: {
+      backgroundColor: '#0093b5',
+      padding: '40px',
+      marginBottom: '20px',
+      width: '100%',
+      color: '#fff',
+      textAlign: 'center',
+    },
+    
+  };
+ function HeaderSection() {
+     	return (
+            <div style={styles.container}>
+            <div style={styles.hero}>
+              <h1>Contributors</h1>
+              <h3 class="h3-white-text"> Meet the team behind Techtonica's Question Builder </h3>
+            </div>
+ 		</div>
+ 	);
+ }
 
-function HeaderSection() {
-	return (
-		<div class="row row_center blue-background">
-			<h1 class="h1-white-text">Contributors</h1>
-            <h3 class="h3-white-text"> Meet the team behind Techtonica's Question Builder </h3>
-		</div>
-	);
-}
-
-export default HeaderSection;
+ export default HeaderSection;
