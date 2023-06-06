@@ -1,5 +1,4 @@
 import '/src/components/AskingQuestions.css'
-import { Button } from 'react-bootstrap';
 
 function AskingQuestions() {
 	return (
