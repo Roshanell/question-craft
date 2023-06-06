@@ -1,4 +1,4 @@
-function Response() {
+function Response({ response }) {
 	return (
 		<div>
 			<h1>Response will go here</h1>
