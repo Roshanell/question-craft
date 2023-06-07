@@ -1,5 +1,3 @@
-Question-craft generates a question using Chat GPT OpenAI API from user input. The application uses React & Bootstrap on the frontend and Node.JS, Express on the backend.
-
 #  Question-Craft
 
 ## About The Project
@@ -12,12 +10,24 @@ Question-Craft is a web application that generates questions using the Chat GPT 
 
 ## Table of Contents
 
+- [User Flow](#User-Flow)
 - [Built With](#Built-With)
 - [Installation](#installation)
 - [Configuration](#configuration)
 
+## User Flow
 
-## Built With s
+Once you have the Question-Craft application set up and running, follow these steps to generate questions:
+
+1. Enter your input text in the provided text input field.
+2. Click the "Generate Questions" button.
+3. The application will send the input to the backend, which will communicate with the OpenAI API.
+4. The generated questions will be displayed on the screen.
+
+Feel free to experiment with different inputs and explore the generated questions!
+
+
+## Built With 
 
 - **Front-end**: The front-end of the application is built using HTML, CSS, and JavaScript.
 
@@ -38,10 +48,6 @@ Question-Craft is a web application that generates questions using the Chat GPT 
     <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168977094-6a5073a2-2f48-4f5a-ae0e-ed1421a678c6.png" width="48" height="48" alt="JavaScript" />
       <br>JavaScript
-    </td>
-    <td align="center" width="96">
-        <img src="https://user-images.githubusercontent.com/74997368/168976819-15a1f4e0-29cf-4ac0-94a7-1f15eee374a1.png" width="48" height="48" alt="postgreSQL" />
-      <br>postgreSQL
     </td>
     <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168978951-5ac2af5e-c911-4e59-b493-683071cf1860.png" width="48" height="48" alt="Express" />
@@ -117,7 +123,8 @@ Server runs on http://localhost:8080 and client on http://localhost:5173
 
 ## Configuration
 
-The Question-Craft application requires an OpenAI API key to communicate with the Chat GPT API. Follow these steps to set up your API key:
+The Question-Craft application requires an OpenAI API key to communicate with the Chat GPT API. 
+Follow these steps to set up your API key:
 
 1. Go to the OpenAI website and sign in to your account (or create a new one).
 2. Generate an API key for the Chat GPT API.
@@ -125,4 +132,8 @@ The Question-Craft application requires an OpenAI API key to communicate with th
 4. In the backend directory of the Question-Craft project, create a .env file.
 5. Inside the .env file, add the following line and replace YOUR_API_KEY with your actual API key:
 
- 
+```bash
+REACT_APP_OPENAI_API_KEY=YOUR_API_KEY
+```
+
+
