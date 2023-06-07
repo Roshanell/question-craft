@@ -1,0 +1,3 @@
+//Create an account at platform.openai.com to get your API key
+//Replace everything between the <> with your key and remove the <>
+OPENAI_API_KEY="<openai-api-key>"
