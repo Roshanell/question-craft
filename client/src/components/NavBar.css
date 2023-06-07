@@ -1,0 +1,8 @@
+.link-style {
+    color: #05556d;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+  }
+  
+  .link-style:hover {
+    color: #3ca1c1; /* Lightened color when hovering */
+  }

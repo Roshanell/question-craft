@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const NavBar = () => {
     const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
+
     return (
         <Navbar bg="light" expand="lg" className="mb-3">
             <Container>
@@ -17,7 +18,7 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                       <Link className="nav-link" to='/'>Home</Link>
-                      <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md">How to ask a question?</a>
+                      <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md" style={{ color: '#05556d' }} >How to ask a question?</a>
                       <Link className="nav-link" to='/about'>Meet Contributors </Link>
                     </Nav>
                 </Navbar.Collapse>
