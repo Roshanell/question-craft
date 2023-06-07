@@ -12,31 +12,13 @@ const NavBar = () => {
                     Use `<Link />` component instead of `<Nav.Link>` or something because we want the linking to be
                     handled by react-router and not the browser.
                 */}
-                <Link className="navbar-brand" to="/">Vlad&apos;s Template</Link>
+                <Link className="navbar-brand" to="/">Question-Craft</Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className="nav-link" to='/about'>About</Link>
-                        {isAuthenticated ? (
-                            <>
-                                <Link className="nav-link fst-italic" to="/profile">
-                                    {user.email}
-                                </Link>
-                                <button
-                                    className="btn btn-primary"
-                                    onClick={() => logout()}
-                                >
-                                    Log Out
-                                </button>
-                            </>
-                        ) : (
-                            <button
-                                className="btn btn-primary"
-                                onClick={() => loginWithRedirect()}
-                            >
-                                Log In
-                            </button>
-                        )}
+                      <Link className="nav-link" to='/'>Home</Link>
+                      <Link className="nav-link" to='/about'>How to ask a question? </Link>
+                      <Link className="nav-link" to='/about'>Meet Contributors </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
