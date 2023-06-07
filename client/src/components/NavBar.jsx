@@ -28,8 +28,8 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                       <Link className="nav-link" to='/'style={{ color: '#05556d', fontWeight: 'bold' }} >Home</Link>
-                      <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md"style={{ color: '#05556d', fontWeight: 'bold' }} >How to ask a question?</a>
-                      <Link className="nav-link" to='/about' style={{ color: '#05556d', fontWeight: 'bold' }} >Meet Contributors </Link>
+                      <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md"style={{ color: '#05556d', fontWeight: 'semi-bold' }} >How to ask a question?</a>
+                      <Link className="nav-link" to='/about' style={{ color: '#05556d', fontWeight: 'semi-bold' }} >Meet Contributors </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
