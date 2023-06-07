@@ -17,7 +17,7 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                       <Link className="nav-link" to='/'>Home</Link>
-                      <Link className="nav-link" to='/about'>How to ask a question? </Link>
+                      <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md">How to ask a question?</a>
                       <Link className="nav-link" to='/about'>Meet Contributors </Link>
                     </Nav>
                 </Navbar.Collapse>
