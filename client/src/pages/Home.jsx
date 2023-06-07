@@ -2,6 +2,8 @@ import HeaderSection from "../components/HeaderSection";
 import QuestionForm from "../components/form";
 import Response from "../components/Response";
 import AskingQuestions from "../components/AskingQuestions";
+import Footer from "../components/Footer";
+
 const Home = () => {
     return (
         <div>
@@ -9,6 +11,7 @@ const Home = () => {
             <AskingQuestions />
             <QuestionForm />
             <Response />
+            <Footer />
         </div>
     );
 };

@@ -6,3 +6,7 @@
   .link-style:hover {
     color: #3ca1c1; /* Lightened color when hovering */
   }
+
+.nav-link {
+  font-weight: bold;
+}
