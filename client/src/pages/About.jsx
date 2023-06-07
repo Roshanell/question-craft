@@ -1,7 +1,13 @@
+import AboutHeader from "../components/AboutHeader";
+import AboutSection from "../components/AboutSection";
+import Footer from "../components/Footer";
+
 const About = () => {
     return (
         <div>
-            <h1>About Me</h1>
+            <AboutHeader />           
+            <AboutSection />
+            <Footer />
         </div>
     );
 };
