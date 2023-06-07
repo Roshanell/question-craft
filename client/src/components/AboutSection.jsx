@@ -35,7 +35,7 @@ const AboutSection = () => {
             <Card className="mb-3">
               <Row noGutters>
                 <Col xs={4}>
-                  <Image src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*ZzUGWgV_iSVhWHHtQVPHSw.png"  style={{ maxWidth: '300px' }} roundedCircle className="p-3" />
+                  <Image src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*ZzUGWgV_iSVhWHHtQVPHSw.png"   style={{ maxWidth: '100%', height: 'auto', width: '300px' }} roundedCircle className="p-3" />
                 </Col>
                 <Col xs={8}>
                   <Card.Body>
