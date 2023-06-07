@@ -1,6 +1,9 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import '/src/components/NavBar.css'
+import Logo from "../assets/1.png";
+
 
 const NavBar = () => {
     const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
@@ -13,13 +16,20 @@ const NavBar = () => {
                     Use `<Link />` component instead of `<Nav.Link>` or something because we want the linking to be
                     handled by react-router and not the browser.
                 */}
-                <Link className="navbar-brand" to="/">Question-Craft</Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+             <Navbar.Brand href="/">
+            <img
+              src={Logo}
+              height="30"
+              className="d-lg-inline-block"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>                
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                      <Link className="nav-link" to='/'>Home</Link>
+                      <Link className="nav-link" to='/' style={{ color: '#05556d' }} >Home</Link>
                       <a className="nav-link" href="https://github.com/Techtonica/curriculum/blob/main/onboarding/asking-good-questions.md" style={{ color: '#05556d' }} >How to ask a question?</a>
-                      <Link className="nav-link" to='/about'>Meet Contributors </Link>
+                      <Link className="nav-link" to='/about' style={{ color: '#05556d' }} >Meet Contributors </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
