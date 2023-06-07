@@ -1,4 +1,4 @@
-qimport { Container, Row, Col, Card, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import { Linkedin, Github } from "react-bootstrap-icons";
 
 const AboutSection = () => {
