@@ -10,22 +10,10 @@ Question-Craft is a web application that generates questions using the Chat GPT 
 
 ## Table of Contents
 
-- [User Flow](#User-Flow)
 - [Built With](#Built-With)
 - [Installation](#installation)
+- [User Flow](#User-Flow)
 - [Configuration](#configuration)
-
-## User Flow
-
-Once you have the Question-Craft application set up and running, follow these steps to generate questions:
-
-1. Enter your input text in the provided text input field.
-2. Click the "Generate Questions" button.
-3. The application will send the input to the backend, which will communicate with the OpenAI API.
-4. The generated questions will be displayed on the screen.
-
-Feel free to experiment with different inputs and explore the generated questions!
-
 
 ## Built With 
 
@@ -67,6 +55,17 @@ Feel free to experiment with different inputs and explore the generated question
     </td>
   
 </table>
+
+## User Flow
+
+Once you have the Question-Craft application set up and running, follow these steps to generate questions:
+
+1. Enter your input text in the provided text input field.
+2. Click the "Generate Questions" button.
+3. The application will send the input to the backend, which will communicate with the OpenAI API.
+4. The generated questions will be displayed on the screen.
+
+Feel free to experiment with different inputs and explore the generated questions!
 
 
 ## Installation
