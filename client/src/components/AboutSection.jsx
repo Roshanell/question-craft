@@ -112,7 +112,7 @@ const AboutSection = () => {
 								>
 									<Image
 										src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*K4UH3KOsovJE7fzqdA23Fg.png"
-										style={{ maxWidth: "100%", height: "auto", width: "200px" }}
+										style={{ maxWidth: "100%", height: "auto", width: "300px" }}
 										roundedCircle
 										className="p-3"
 									/>
@@ -155,7 +155,7 @@ const AboutSection = () => {
 				<Row>
 					<Col xs={12}>
 						<Card className="mb-3">
-							<Row noGutters>
+							<Row >
 								<Col xs={4}>
 									<Image
 										src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*Oxhs2VdlOI1z1javQI1s4w.jpeg"
