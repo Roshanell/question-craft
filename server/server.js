@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
-const { Configuration, OpenAIApi } = require('openai');
+require('dotenv').config(); // Load environment variables from .env file
+const { Configuration, OpenAIApi, ApiException } = require('openai'); // Import ApiException for specific error handling
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -9,22 +9,22 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
+// Configuration for OpenAI API
 const configuration = new Configuration({
-    organization: "org-e9LvttIoF3o21ySUOzFoq4oi",
+    organization: process.env.OPENAI_ORGANIZATION_ID,
     apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
-// const mockQuestion = [{"question": 'What is the best way to have a user upload an image, saving it to a data table, and then used for a profile picture?'}];
-
+// Endpoint to handle OpenAI requests
 app.get('/api/openai/:prompt', async (req, res) => {
-    console.log('testing openAI call')
-    // console.log(req.params.prompt)
+    console.log('Testing OpenAI call');
     try {
-        const prompt = req.params.prompt
-        // res.send(data)
+        const prompt = req.params.prompt;
+        console.log('Received prompt:', prompt);
+
         const response = await openai.createCompletion({
-            model: "text-davinci-003",
+            model: "gpt-3.5-turbo", //swapped for new model as Davinci has been decrapetated.
             prompt: prompt,
             max_tokens: 500,
             temperature: 1,
@@ -32,18 +32,20 @@ app.get('/api/openai/:prompt', async (req, res) => {
             frequency_penalty: 0,
             presence_penalty: 0,
         });
-        // console.log(mockQuestion)
-        // res.send(mockQuestion)
-        console.log('new notes', response.data.choices[0])
-        res.json(response.data.choices[0].text)
-        // console.log('testing', data)
-        // console.log(JSON.parse(response.data.choices));
+
+        console.log('Response:', response.data.choices[0].text);
+        res.json(response.data.choices[0].text);
     } catch (e) {
-        return res.status(400).json({ e });
+        if (e instanceof ApiException && e.response.status === 429) {
+            // Handle rate limit error as OpenAi know longer gives free credits
+            return res.status(429).json({ error: "API rate limit reached. Please try again later." });
+        } else {
+            console.error('Error occurred:', e);
+            return res.status(500).json({ error: e.message });
+        }
     }
-    
 });
 
 app.listen(PORT, () => {
-    console.log(`Hola, Server listening on ${PORT}`);
+    console.log(`Server listening on port ${PORT}`);
 });
