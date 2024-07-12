@@ -1,3 +1,5 @@
 //Create an account at platform.openai.com to get your API key
 //Replace everything between the <> with your key and remove the <>
-OPENAI_API_KEY="<openai-api-key>"
+
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_ORGANIZATION_ID=your_organization_id_here //"update envexample to include variable for organization id as reccomened by documentation"
